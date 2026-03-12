@@ -16,19 +16,21 @@ services:
     networks:
       - gsneaker
     
-  # gsneaker-be:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   restart: always
-  #   ports:
-  #     - 8080:8080
-  #   depends_on:
-  #     - gsneakerdb
-  #   environment:
-  #     SPRING_DATASOURCE_URL: jdbc:postgresql://gsneakerdb:5432/mydatabase
-  #     SPRING_DATASOURCE_USERNAME: gsneaker
-  #     SPRING_DATASOURCE_PASSWORD: gsneaker
+  gsneaker-be:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - gsneakerdb
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://gsneakerdb:5432/gsneaker
+      SPRING_DATASOURCE_USERNAME: gsneaker
+      SPRING_DATASOURCE_PASSWORD: gsneaker
+    networks:
+      - gsneaker
   
 networks:
   gsneaker:

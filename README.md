@@ -17,7 +17,7 @@
 
 ## Step 2: Visit the website
 1. Open the browser and visit:
-   http://localhost
+   http://localhost:8080
 2. Enjoy
 
 # ###############################################
